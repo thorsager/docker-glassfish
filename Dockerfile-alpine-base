@@ -1,0 +1,4 @@
+FROM openjdk:8-jdk-alpine3.7
+MAINTAINER Michael Thorsager, github.com/thorsager
+
+RUN apk --no-cache add xmlstarlet bash openssl ca-certificates wget
