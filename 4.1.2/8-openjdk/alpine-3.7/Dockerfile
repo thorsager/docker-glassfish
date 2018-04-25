@@ -4,16 +4,12 @@
 # - unzip
 # - xmlstartlet
 # - java8 (of some sort)
-FROM openjdk:10-jre-slim
+FROM openjdk:8-jdk-alpine3.7
 MAINTAINER Michael Thorsager, github.com/thorsager
 
-RUN apt-get update && apt-get install -y \
-	xmlstarlet \
-	openssl \
-	ca-certificates \
-	 wget 
+RUN apk --no-cache add xmlstarlet bash openssl ca-certificates wget
 
-ARG gf_arch_url=http://download.oracle.com/glassfish/5.0/release/glassfish-5.0.zip
+ARG gf_arch_url=http://download.oracle.com/glassfish/4.1.2/release/glassfish-4.1.2.zip
 ARG as_admin_password=glassfish
 
 ENV GLASSFISH_ARCHIVE=glassfish \
