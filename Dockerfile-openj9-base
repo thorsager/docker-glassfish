@@ -1,0 +1,6 @@
+FROM adoptopenjdk:8-jdk-openj9
+
+USER root
+
+RUN apt-get update \
+  && apt-get -y install xmlstarlet bash openssl ca-certificates wget unzip
