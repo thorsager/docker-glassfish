@@ -31,10 +31,3 @@ docker build -f Dockerfile \
 	--build-arg from=thorsager/glassfish-base:openj9 \
 	-t thorsager/glassfish:glassfish4-openj9 \
 	.
-
-
-#docker build -f Dockerfile-jdk-alpine -t thorsager/glassfish:glassfish4-openjdk-8-alpine .
-#docker build -f Dockerfile-4.1.1-jdk-alpine -t thorsager/glassfish:glassfish4.1.1-openjdk-8-alpine .
-
-#docker build -f Dockerfile-eclipselink_2.7.0 -t thorsager/glassfish:glassfish4-el270 .
-#docker build -f Dockerfile-eclipselink_2.7.0-jdk-alpine -t thorsager/glassfish:glassfish4-el270-openjdk-8-alpine .
